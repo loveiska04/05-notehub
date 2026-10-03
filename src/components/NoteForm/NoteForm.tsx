@@ -1,4 +1,3 @@
-```tsx
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import { useId } from 'react';
 import * as Yup from 'yup';
@@ -90,8 +89,7 @@ export default function NoteForm({ onClose }: NoteFormProps) {
             as="select"
             id={`${fieldId}-tag`}
             name="tag"
-            className={css.select}
-          >
+            className={css.select}>
             <option value="Todo">-- Choose type note</option>
             <option value="Todo">Todo</option>
             <option value="Work">Work</option>
@@ -114,4 +112,3 @@ export default function NoteForm({ onClose }: NoteFormProps) {
     </Formik>
   );
 }
-```
