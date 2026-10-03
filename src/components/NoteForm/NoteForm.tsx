@@ -90,7 +90,7 @@ export default function NoteForm({ onClose }: NoteFormProps) {
             id={`${fieldId}-tag`}
             name="tag"
             className={css.select}>
-            <option value="Todo">-- Choose type note</option>
+            <option value="">-- Choose type note</option>
             <option value="Todo">Todo</option>
             <option value="Work">Work</option>
             <option value="Personal">Personal</option>
