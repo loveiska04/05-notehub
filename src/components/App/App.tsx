@@ -62,11 +62,11 @@ function App() {
           }
         </header>
         {data && data.notes.length > 0 && <NoteList notes={data?.notes} />}
-        {isModalOpen && (
-          <Modal onClose={closeModal}>
-            <NoteForm onClose={closeModal} note={null} />
-          </Modal>
-        )}
+       {isModalOpen && (
+  <Modal onClose={closeModal}>
+    <NoteForm onClose={closeModal} />
+  </Modal>
+)}
         {(isLoading || isFetching) && <Loader />}
         {isError && <ErrorMessage />}
       </div>
