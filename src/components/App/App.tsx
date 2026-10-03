@@ -6,7 +6,7 @@ import SearchBox from '../SearchBox/SearchBox';
 import NoteList from '../NoteList/NoteList';
 import { fetchNotes } from '../../services/noteService';
 import Modal from '../Modal/Modal';
-import NoteFrom from '../NoteForm/NoteFrom';
+import NoteForm from '../NoteForm/NoteForm';
 import Pagination from '../Pagination/Pagination';
 import Loader from '../Loader/Loader';
 import ErrorMessage from '../ErrorMessage/ErrorMessage';
@@ -64,7 +64,7 @@ function App() {
         {data && data.notes.length > 0 && <NoteList notes={data?.notes} />}
         {isModalOpen && (
           <Modal onClose={closeModal}>
-            <NoteFrom onClose={closeModal} note={null} />
+            <NoteForm onClose={closeModal} note={null} />
           </Modal>
         )}
         {(isLoading || isFetching) && <Loader />}
